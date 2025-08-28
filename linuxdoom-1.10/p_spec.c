@@ -127,8 +127,6 @@ animdef_t		animdefs[] =
     {true,	"SFALL4",	"SFALL1",	8},
     {true,	"WFALL4",	"WFALL1",	8},
     {true,	"DBRAIN4",	"DBRAIN1",	8},
-	
-    {-1}
 };
 
 anim_t		anims[MAXANIMS];
@@ -152,7 +150,8 @@ void P_InitPicAnims (void)
     
     //	Init animation
     lastanim = anims;
-    for (i=0 ; animdefs[i].istexture != -1 ; i++)
+	size_t count = sizeof(animdefs) / sizeof(animdefs[0]);
+    for (i=0 ; i < count ; i++)
     {
 	if (animdefs[i].istexture)
 	{

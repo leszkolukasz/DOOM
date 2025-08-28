@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "name": "C Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/linuxdoom-1.10/build/linuxxdoom",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [
+        { "name": "DOOMWADDIR", "value": "${workspaceFolder}/linuxdoom-1.10" }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build"
+    }
+  ]
+}

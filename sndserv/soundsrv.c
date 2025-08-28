@@ -331,7 +331,7 @@ grabdata
     doom2fwad = malloc(strlen(doomwaddir)+1+10+1);
     sprintf(doom2fwad, "%s/doom2f.wad", doomwaddir);
     
-    doomuwad = malloc(strlen(doomwaddir)+1+8+1);
+    doomuwad = malloc(strlen(doomwaddir)+1+9+1);
     sprintf(doomuwad, "%s/doomu.wad", doomwaddir);
     
     doomwad = malloc(strlen(doomwaddir)+1+8+1);
