@@ -6,7 +6,7 @@
 #
 CC=  gcc  # gcc or g++
 
-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX -Wno-unused-variable # -DUSEASM 
+CFLAGS=-g -std=gnu17 -Wall -DNORMALUNIX -DLINUX -Wno-unused-variable # -DUSEASM 
 LDFLAGS=-L/usr/X11R6/lib
 LIBS=-lXext -lX11 -lnsl -lm
 
@@ -89,6 +89,9 @@ $(O)/linuxxdoom:	$(OBJS) $(O)/i_main.o
 
 $(O)/%.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+format:
+	clang-format -i *.c *.h
 
 #############################################################
 #
